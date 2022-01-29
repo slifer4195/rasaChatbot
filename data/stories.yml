@@ -1,0 +1,48 @@
+version: "2.0"
+
+stories:
+
+- story: introducion_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: introduce
+  - action: utter_introduce
+
+- story: question_path
+  steps:
+  - intent: introduce
+  - action: utter_introduce
+  - intent: question
+  - action: utter_question
+
+- story: reasoning_path
+  steps:
+  - intent: issue
+  - action: utter_issue
+  - intent: understand
+  - action: utter_respond
+  - intent: benefit
+  - action: utter_benefit
+
+- story: past_path
+  steps:
+  - intent: attempt
+  - action: utter_attempt
+  - intent: solution
+  - action: utter_solution
+  - intent: suggestion
+  - action: utter_suggestion
+
+- story: confidence_path
+  steps:
+  - intent: confidence
+  - action: utter_confidence
+  - intent: suggestion
+  - action: utter_suggestion
+
+
+
+  
+
+

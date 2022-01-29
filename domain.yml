@@ -1,0 +1,67 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - introduce
+  - issue
+  - understand
+  - benefit
+  - attempt
+  - confidence
+  - suggestion
+  - solution
+  - question
+
+responses:
+  utter_greet:
+  - text: "Hi"
+
+  utter_introduce:
+  - text: "Well. I've been pastoring the church for the last 25 years and 
+            I have built up a nice congregation. My wife's at home with Alzheimer's. 
+            I feel very guilty these days because I've been drinking pretty heavily and I don't want 
+            to disappoint people. But it’s the only way I’ve been able to cope lately."
+
+  utter_issue:
+  - text: "It's not an easy situation. My wife has good days and bad days. And on the bad days, I get affected the most. You know my son helps a lot around the house but he is working on his PhD.
+             and he doesn’t have time to help me out that much. It's just very painful to watch it deteriorate and the drinking helps me cope."
+
+  utter_respond:
+  - text: "Yes, it has been pretty hard for me."
+
+  utter_benefit:
+  - text: "It calms me down, helps me sleep, and makes it easier for me to communicate with people."
+  - text: "I know it's not healthy for me but it's the most cost-efficient way for me to calm down these days."
+
+  utter_attempt:
+  - text: "You know I've been successful sometimes."
+  - text: "I can cut back to two or three beers a day but then something will always come up to trigger it again."
+  - text: "You know something will happen at church, I have a problem with trying to communicate with my wife, or something in the family."
+
+  utter_solution:
+  - text: "When I focus on trying to exercise more, when I meet with friends 
+          but I don't have a lot of time to do that with my current situation. 
+          That’s why I could never get any consistent with any of that. "
+  - text: "Back in the day I used to swim every day. That was very relaxing. But I can't take exercise often much anymore
+          You know with my current situation if I could just find some way to do it regularly, I think it will help."
+
+  utter_suggestion:
+  - text: "Yeah, that`s a pretty good idea. I will make sure to do that!"
+
+  utter_confidence:
+  - text: "Oh on a scale of 1 to 10, at least an eight."
+  - text: "On a scale of 1 to 10, probably about six or seven. It’s because I haven’t been successful in maintaining it in the past. "
+  - text: "I don`t think I can do it"
+
+  utter_question:
+  - text: "I have been drinking a lot. About 2 wo or three beers a night with a couple of shots."
+  - text: "My drinking habit`s been pretty bad. I would say 2 to 3 beers a night"
+
+  utter_goodbye:
+  - text: "Bye"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,124 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - nice to meet you
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: introduce
+  examples: |
+      - tell me about yourself
+      - introduce
+      - explain situation
+      - what is going on
+
+- intent: issue
+  examples: |
+      - Okay. Can you tell me a little bit more about your wife?
+      - everything okay
+      - what is wrong
+      - bothering you
+      - is your family doing okay
+      - why do you feel bad
+      - terrible
+      - sad
+
+- intent: understand
+  examples: |
+      - That sounds like it would be incredibly hard. So it sounds like you are using alcohol as a coping mechanism. 
+      - I see
+      - thats why you are drinking much
+      - I understand what you are going through
+      - extremly diffuclt and hard
+      - it is tough 
+      - deal with 
+      - struggle
+      - get it
+
+- intent: benefit
+  examples: |
+      - why you drink
+      - any benefit on drinking
+      - what is the reason for drinking
+      - are you problems solve by that
+      - pros
+      - feel better
+      - improve
+      - does it make it go away
+      - is it helping your condition
+
+- intent: attempt
+  examples: |
+    - have you ever tried
+    - did you try your best
+    - are you trying to stop
+    - have you tried quit , quitting or stop , stopping 
+    - attempt to quit before in the past
+    - What has worked in the past when you have cut back on your use 
+
+- intent: solution
+  examples: |
+    - what has worked out
+    - has it been solved , resolved
+    - were you able to succeed before
+    - any success attempts
+    - working to stop
+    - What about some exercise? Did it work for you in the past to help with your stress? 
+
+- intent: suggestion
+  examples: |
+    - have you thought about an Alzheimer’s support group or something that could help you have?
+    - did you try to
+    - will you do
+    - maybe this can help you
+    - why don`t you try this
+    - Would you be willing to first elimunce.
+    - What about some exercise?
+    - Okay, so maybe instead of cutting out alcohol altogether you could cut back at first. 
+
+- intent: confidence
+  examples: |
+    - Do you feel willing to cut back right now on a scale of one to ten how willing you would say that you are?
+    - How confident are you that you would be able to do that?
+    - you sure you can do
+    - do you think you can do it
+    - is it possible for you
+
+
+- intent: question
+  examples: |
+    - how much you are drinking
+    - how often are you drinking
+    - do you do a lot
+    - how serious is it
+    - how bad is it
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Maybe I can talk to you about this again at the next visit?
+    - Okay great. It was nice meeting you and nice talking to you.
+
