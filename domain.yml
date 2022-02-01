@@ -3,27 +3,47 @@ version: "2.0"
 intents:
   - greet
   - goodbye
-  - introduce
-  - issue
-  - understand
-  - benefit
-  - attempt
-  - confidence
-  - suggestion
-  - solution
-  - question
+  - asking_patient_issue
+  - asking_wife_issue
+  - sympathy
+  # - understand
+  # - benefit
+  # - attempt
+  # - confidence
+  # - suggestion
+  # - solution
+  # - question
+  # - drinkreason
+  # - drinktalk
+
+# policies:
+#   - name: KerasPolicy
+#     max_history: 2
+#     epochs: 200
+#     validation_split: 0.1
+
 
 responses:
+
+  utter_drinkreason_response:
+  - text: "it helps me cope with my problems"
+
+  utter_drinktalk_response:
+  - text: "yes, sure"
+
+  utter_thanks:
+  - text: "thank you for understanding"
+
   utter_greet:
   - text: "Hi"
 
-  utter_introduce:
+  utter_issue:
   - text: "Well. I've been pastoring the church for the last 25 years and 
             I have built up a nice congregation. My wife's at home with Alzheimer's. 
             I feel very guilty these days because I've been drinking pretty heavily and I don't want 
             to disappoint people. But it’s the only way I’ve been able to cope lately."
 
-  utter_issue:
+  utter_wife_issue:
   - text: "It's not an easy situation. My wife has good days and bad days. And on the bad days, I get affected the most. You know my son helps a lot around the house but he is working on his PhD.
              and he doesn’t have time to help me out that much. It's just very painful to watch it deteriorate and the drinking helps me cope."
 
