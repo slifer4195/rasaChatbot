@@ -37,7 +37,7 @@ policies:
     max_history: 5
     epochs: 100
   - name: TEDPolicy
-    max_history: 2
+    max_history: 4
     epochs: 200
     constrain_similarities: true
     validation_split: 0.1

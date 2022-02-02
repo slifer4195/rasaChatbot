@@ -18,8 +18,19 @@ stories:
   steps:
   - intent: asking_wife_issue
   - action: utter_wife_issue
-  - intent: sympathy
+  - intent: sympathy # maybe we can make this a rule
   - action: utter_thanks
+
+- story: talk_about_drinking
+  steps: 
+  - intent: ask_start_drinking_audit 
+  - action: utter_yes
+  - intent: ask_drinkreason_benefits
+  - action: utter_drink_reason
+  - intent: ask_tried_to_cut_back
+  - action: utter_tried_to_cut_back
+  - intent: ask_tried_to_cut_back_what_worked
+  - action: utter_tried_to_cut_back_what_worked
 
 # - story: reasoning_path
 #   steps:

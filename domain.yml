@@ -6,6 +6,10 @@ intents:
   - asking_patient_issue
   - asking_wife_issue
   - sympathy
+  - ask_start_drinking_audit
+  - ask_drinkreason_benefits
+  - ask_tried_to_cut_back
+  - ask_tried_to_cut_back_what_worked
   # - understand
   # - benefit
   # - attempt
@@ -25,7 +29,7 @@ intents:
 
 responses:
 
-  utter_drinkreason_response:
+  utter_drink_reason:
   - text: "it helps me cope with my problems"
 
   utter_drinktalk_response:
@@ -37,15 +41,18 @@ responses:
   utter_greet:
   - text: "Hi"
 
+  utter_yes:
+  - text: "sure"
+  - text: "yes"
+
   utter_issue:
   - text: "Well. I've been pastoring the church for the last 25 years and 
             I have built up a nice congregation. My wife's at home with Alzheimer's. 
-            I feel very guilty these days because I've been drinking pretty heavily and I don't want 
-            to disappoint people. But it’s the only way I’ve been able to cope lately."
+            I feel very guilty these days because I've been drinking pretty heavily "
 
   utter_wife_issue:
   - text: "It's not an easy situation. My wife has good days and bad days. And on the bad days, I get affected the most. You know my son helps a lot around the house but he is working on his PhD.
-             and he doesn’t have time to help me out that much. It's just very painful to watch it deteriorate and the drinking helps me cope."
+             and he doesn’t have time to help me out that much. "
 
   utter_respond:
   - text: "Yes, it has been pretty hard for me."
@@ -54,12 +61,12 @@ responses:
   - text: "It calms me down, helps me sleep, and makes it easier for me to communicate with people."
   - text: "I know it's not healthy for me but it's the most cost-efficient way for me to calm down these days."
 
-  utter_attempt:
+  utter_tried_to_cut_back:
   - text: "You know I've been successful sometimes."
   - text: "I can cut back to two or three beers a day but then something will always come up to trigger it again."
   - text: "You know something will happen at church, I have a problem with trying to communicate with my wife, or something in the family."
 
-  utter_solution:
+  utter_tried_to_cut_back_what_worked:
   - text: "When I focus on trying to exercise more, when I meet with friends 
           but I don't have a lot of time to do that with my current situation. 
           That’s why I could never get any consistent with any of that. "

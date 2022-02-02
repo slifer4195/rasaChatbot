@@ -22,7 +22,7 @@ nlu:
 - intent: asking_patient_issue
   examples: |
       - tell me about yourself?
-      - could you tell me about your issue? 
+      - tell me about your issue? 
       - what problems are you facing?
       - reason for visiting?
       - reason for coming here?
@@ -30,29 +30,30 @@ nlu:
 - intent: asking_wife_issue
   examples: |
       - tell me more about your wife?
-      - wife's problem's
-      - wife's disease
-      - difficulties faced by your wife
+      - wife's problem's?
+      - wife's disease?
+      - difficulties faced by your wife?
 
-- intent: sympathy
+- intent: sympathy # maybe should make this a rule instead of using in stories
   examples: |
       - hard to handle
       - a lot of difficulties
       - i understand
       - compassion
 
-# - intent: drinkreason
-#   examples: |
-#       - Why do you drink
-#       - what makes you drink
-#       - what is the reason for your consumption of alcohol
-#       - what is the reason for your drinking
+- intent: ask_drinkreason_benefits # extra why's maybe should remove
+  examples: |
+      - reason for your consumption of alcohol?
+      - reason for your drinking?
+      - benefits of drinking?
 
-# - intent: drinktalk
-#   examples: |
-#       - can we talk about your drinking problems?
-#       - can we talk about your drinking issues?
-#       - do you mind if we talk a bit more about your alcohol addiction? 
+- intent: ask_start_drinking_audit
+  examples: |
+      - talk about your drinking problems?
+      - talk about your drinking issues?
+      - do you mind if we talk a bit more about your alcohol addiction?
+      - alcohol audit?
+      - alcohol assessment?
 
 # - intent: understand
 #   examples: |
@@ -66,7 +67,7 @@ nlu:
 #       - get it
 #       - That's very unfortunate
 
-# - intent: benefit
+# - intent: benefit_of_drinking
 #   examples: |
 #       - why you drink
 #       - any benefit on drinking
@@ -78,23 +79,20 @@ nlu:
 #       - does it make it go away
 #       - is it helping your condition
 
-# - intent: attempt
-#   examples: |
-#     - have you ever tried
-#     - did you try your best
-#     - are you trying to stop
-#     - have you tried quit , quitting or stop , stopping 
-#     - attempt to quit before in the past
-#     - What has worked in the past when you have cut back on your use 
+- intent: ask_tried_to_cut_back
+  examples: |
+    - tried quitting drinking
+    - tried stopping drinking before
+    - attempt to quit alcohol before in the past
+    - cut back on drinking
+    - reduce alcohol
 
-# - intent: solution
-#   examples: |
-#     - what has worked out
-#     - has it been solved , resolved
-#     - were you able to succeed before
-#     - any success attempts
-#     - working to stop
-#     - What about some exercise? Did it work for you in the past to help with your stress? 
+- intent: ask_tried_to_cut_back_what_worked
+  examples: |
+    - factors that helped when you tried to quit before
+    - aided you in cutting back of alcohol
+    - helped you when trying to quite drinking
+    - What has worked in the past when you have cut back on your use 
 
 # - intent: suggestion
 #   examples: |
