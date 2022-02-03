@@ -21,11 +21,12 @@ nlu:
 
 - intent: asking_patient_issue
   examples: |
-      - tell me about yourself?
-      - tell me about your issue? 
-      - what problems are you facing?
-      - reason for visiting?
-      - reason for coming here?
+      - tell me about yourself
+      - tell me about your issue
+      - what problems are you facing
+      - reason for visiting
+      - reason for coming here
+      - tell me why you are here today
 
 - intent: asking_wife_issue
   examples: |
@@ -55,6 +56,34 @@ nlu:
       - alcohol audit?
       - alcohol assessment?
 
+- intent: ask_support_group_help
+  examples: |
+    - thought about an Alzheimer’s support group to help you
+    - circle of friends to support you with your problems
+    - group of people to help you 
+
+- intent: ask_willingness_to_cut_back
+  examples: |
+    - feel willing to cut back on alcholhol right now on a scale of one to ten
+    - want to quit drinking from today
+    - try to stop drinking today
+    - feel like stopping drinking right now
+
+- intent: ask_cutback_confidence
+  examples: |
+    - confidence that you would be able to stop drinking
+    - likely it is that you can stop alcohol intake
+    - confidence that you would be able to quit consuming alcohol
+    - belief that you can stop drinking
+
+- intent: ask_solution_increase_confidence
+  examples: |
+    - find ways of making you more confident
+    - maybe we should work on increasing your confidence
+    - solutions for increasing your confidence
+    - talk about ways to help you cut back on alcohol
+    - solutions to help you stop drinking
+    
 # - intent: understand
 #   examples: |
 #       - That sounds like it would be incredibly hard. So it sounds like you are using alcohol as a coping mechanism. 
@@ -81,23 +110,21 @@ nlu:
 
 - intent: ask_tried_to_cut_back
   examples: |
-    - tried quitting drinking
+    - tried quitting drinking in the past
     - tried stopping drinking before
     - attempt to quit alcohol before in the past
-    - cut back on drinking
-    - reduce alcohol
+    - cut back on drinking in the past
+    - reduce alcohol intake previously
 
 - intent: ask_tried_to_cut_back_what_worked
   examples: |
     - factors that helped when you tried to quit before
     - aided you in cutting back of alcohol
     - helped you when trying to quite drinking
-    - What has worked in the past when you have cut back on your use 
+    - worked in the past when you have cut back on your use 
 
-# - intent: suggestion
-#   examples: |
-#     - have you thought about an Alzheimer’s support group or something that could help you have?
-#     - Okay, so maybe instead of cutting out alcohol altogether you could cut back at first. 
+
+
 
 # - intent: confidence
 #   examples: |

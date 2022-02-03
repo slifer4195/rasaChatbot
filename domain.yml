@@ -10,6 +10,10 @@ intents:
   - ask_drinkreason_benefits
   - ask_tried_to_cut_back
   - ask_tried_to_cut_back_what_worked
+  - ask_support_group_help
+  - ask_willingness_to_cut_back
+  - ask_cutback_confidence
+  - ask_solution_increase_confidence
   # - understand
   # - benefit
   # - attempt
@@ -28,6 +32,18 @@ intents:
 
 
 responses:
+
+  utter_solution_increase_confidence:
+  - text: "yes, I'd really like that"
+
+  utter_cutback_confidence:
+  - text: "On a scale, that’s probably about six or seven. It’s because I haven’t been successful in maintaining it in the past."
+
+  utter_willingness_to_cut_back:
+  - text: "Yes, I really want to cut back. On a scale, my willingness would be at least eight."
+
+  utter_acknowledgement_support_group:
+  - text: "No I haven't. That's a good idea. I will try to do that"
 
   utter_drink_reason:
   - text: "it helps me cope with my problems"

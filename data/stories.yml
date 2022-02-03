@@ -32,6 +32,17 @@ stories:
   - intent: ask_tried_to_cut_back_what_worked
   - action: utter_tried_to_cut_back_what_worked
 
+- story: suggest_solutions_for_drinking
+  steps: 
+  - intent: ask_support_group_help
+  - action: utter_acknowledgement_support_group
+  - intent: ask_willingness_to_cut_back
+  - action: utter_willingness_to_cut_back
+  - intent: ask_cutback_confidence
+  - action: utter_cutback_confidence
+  - intent: ask_solution_increase_confidence
+  - action: utter_solution_increase_confidence
+
 # - story: reasoning_path
 #   steps:
 #   - intent: issue
@@ -64,8 +75,5 @@ stories:
 #   - intent: drinkreason
 #   - action: utter_drinkreason_response
 
-
-
-  
 
 
