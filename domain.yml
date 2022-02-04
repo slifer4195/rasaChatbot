@@ -14,6 +14,9 @@ intents:
   - ask_willingness_to_cut_back
   - ask_cutback_confidence
   - ask_solution_increase_confidence
+  - ask_quantity_of_drinking
+  - ask_willingness_decrease_alcohol
+  - ask_meet_next_time
   # - understand
   # - benefit
   # - attempt
@@ -33,6 +36,16 @@ intents:
 
 responses:
 
+  utter_meet_next_time:
+  - text: ""
+  utter_willingness_decrease_alcohol:
+  - text: "yes, that sounds doable"
+  - text: "yes, i can do that"
+  - text: "yes, that sounds like a good way of reducing my alcohol intake"
+
+  utter_quantity_of_drinking:
+  - text: "Two or three beers a night with a couple of shots"
+
   utter_solution_increase_confidence:
   - text: "yes, I'd really like that"
 
@@ -48,8 +61,9 @@ responses:
   utter_drink_reason:
   - text: "it helps me cope with my problems"
 
-  utter_drinktalk_response:
+  utter_acknowledgement:
   - text: "yes, sure"
+  - text: "sounds great!"
 
   utter_thanks:
   - text: "thank you for understanding"

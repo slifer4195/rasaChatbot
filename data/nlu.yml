@@ -41,12 +41,14 @@ nlu:
       - a lot of difficulties
       - i understand
       - compassion
+      - sympathy
 
 - intent: ask_drinkreason_benefits # extra why's maybe should remove
   examples: |
-      - reason for your consumption of alcohol?
-      - reason for your drinking?
-      - benefits of drinking?
+      - reason for your consumption of alcohol
+      - reason for your drinking
+      - benefits of drinking
+      - uses of drinking
 
 - intent: ask_start_drinking_audit
   examples: |
@@ -123,7 +125,35 @@ nlu:
     - helped you when trying to quite drinking
     - worked in the past when you have cut back on your use 
 
+- intent: ask_quantity_of_drinking
+  examples: | # TODO: Add more examples
+    - quantity of alcohol you drink
+    - amount of drinks you consume
+    - how much do you drink
 
+# TODO: getting confused with another intent from before
+- intent: ask_willingness_decrease_alcohol
+  examples: | # TODO: Add more examples
+    - decrease amount of alcohol
+    - stop drinking shots
+    - decrease amount of beer you drink
+    - reduce number of shots
+    - slowly reduce the amount of alcohol you drink over time
+
+- intent: ask_meet_next_time
+  examples: | # TODO: Add more examples
+    - lets meet again
+    - meet next week
+    - looking forward to your next visit
+    - please come for the next session
+    - lets follow up again on your next visit
+  
+# - intent: acknowledgement
+#   examples: |
+#     - okay great
+#     - awesome
+#     - good
+#     - 
 
 
 # - intent: confidence
