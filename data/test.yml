@@ -1,0 +1,138 @@
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - nice to meet you
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hello, i will be your nurse today
+
+- intent: asking_patient_issue
+  examples: |
+      - tell me about yourself
+      - tell me about your issue
+      - what problems are you facing
+      - reason for visiting
+      - reason for coming here
+      - tell me why you are here today
+
+- intent: asking_wife_issue
+  examples: |
+      - tell me more about your wife?
+      - can you tell me more about it?
+      - wife's disease problem , issue?
+      # - difficulties faced by your wife?
+
+- intent: sympathy # maybe should make this a rule instead of using in stories
+  examples: |
+      - hard to handle
+      - a lot of difficulties
+      - i understand
+      - compassion
+      - sympathy
+      - get it
+      - going through
+      - must be difficult 
+      - can be though
+
+- intent: ask_drinkreason_benefits # extra why's maybe should remove
+  examples: |
+      - reason for your consumption of alcohol
+      - reason for your drinking
+      - benefits of drinking
+      - uses of drinking
+      
+- intent: ask_start_drinking_audit
+  examples: |
+      - talk about your drinking problems?
+      - talk about your drinking issues?
+      - do you mind if we talk a bit more about your alcohol addiction?
+      - alcohol audit?
+      - alcohol assessment?
+
+- intent: ask_support_group_help
+  examples: |
+    - thought about an Alzheimer’s support group to help you
+    - circle of friends to support you with your problems
+    - group of people to help you 
+- intent: ask_willingness_to_cut_back
+  examples: |
+    - feel willing to cut back on alcholhol right now on a scale of one to ten
+    - want to quit drinking from today
+    - try to stop drinking today
+    - feel like stopping drinking right now
+- intent: ask_cutback_confidence
+  examples: |
+    - confidence that you would be able to stop drinking
+    - likely it is that you can stop alcohol intake
+    - confidence that you would be able to quit consuming alcohol
+    - belief that you can stop drinking
+- intent: ask_solution_increase_confidence
+  examples: |
+    - find ways of making you more confident
+    - maybe we should work on increasing your confidence
+    - solutions for increasing your confidence
+    - talk about ways to help you cut back on alcohol
+    - solutions to help you stop drinking
+
+- intent: ask_tried_to_cut_back
+  examples: |
+    - tried quitting drinking in the past
+    - tried stopping drinking before
+    - attempt to quit alcohol before in the past
+    - cut back on drinking in the past
+    - reduce alcohol intake previously
+
+- intent: ask_tried_to_cut_back_what_worked
+  examples: |
+    - factors that helped when you tried to quit before
+    - aided you in cutting back of alcohol
+    - helped you when trying to quite drinking
+    - worked in the past when you have cut back on your use 
+- intent: ask_quantity_of_drinking
+  examples: | # TODO: Add more examples
+    - quantity of alcohol you drink
+    - amount of drinks you consume
+    - how much do you drink
+# TODO: getting confused with another intent from before
+- intent: ask_willingness_decrease_alcohol
+  examples: | # TODO: Add more examples
+    - decrease amount of alcohol
+    - stop drinking shots
+    - decrease amount of beer you drink
+    - reduce number of shots
+    - slowly reduce the amount of alcohol you drink over time
+
+- intent: ask_meet_next_time
+  examples: | # TODO: Add more examples
+    - lets meet again
+    - meet next week
+    - looking forward to your next visit
+    - please come for the next session
+    - lets follow up again on your next visit
+  
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Maybe I can talk to you about this again at the next visit?
+    - Okay great. It was nice meeting you and nice talking to you.
