@@ -48,8 +48,6 @@ stories:
   - intent: ask_quantity_of_drinking
   - action: utter_quantity_of_drinking
   - intent: ask_tried_to_cut_back
-  - action: utter_tried_to_cut_back
-  - intent: ask_willingness_decrease_alcohol
   - action: utter_willingness_decrease_alcohol
   - intent: ask_meet_next_time
   - action: utter_acknowledgement
