@@ -1,27 +1,37 @@
 import os
-from slack_bolt import App
-from slack_bolt.adapter.socket_mode import SocketModeHandler
+# from slack_bolt import App
+from slack_bolt.async_app import AsyncApp
+from slack_bolt.adapter.socket_mode.async_handler import AsyncSocketModeHandler
 import logging
 import requests
 import json
+import aiohttp
 
 logging.basicConfig(level=logging.DEBUG)
 
 # Install the Slack app and get xoxb- token in advance
-app = App(token=os.environ["SLACK_BOT_TOKEN"])
+app = AsyncApp(token=os.environ["SLACK_BOT_TOKEN"])
 
 @app.event("message")
-def say_hello(event, say):
+async def say_hello(event, say):
     logging.debug("got message")
-    r = requests.post("http://localhost:5005/webhooks/rest/webhook",json={"sender":"test","message":event["text"]})
-    json_data = json.loads(r.text)[0]
-    say(f"{json_data['text']}")
+    async with aiohttp.ClientSession() as session:
+        async with session.post('http://localhost:5005/webhooks/rest/webhook',json={"sender":event['user'],"message":event["text"]}) as response:
+            
+    # r = await requests.post("http://localhost:5005/webhooks/rest/webhook",json={"sender":event['user'],"message":event["text"]})
+            json_data = json.loads(await response.text())[0]
+            await say(f"{json_data['text']}")
 
 
 # Add middleware / listeners here
+async def main():
+    handler = AsyncSocketModeHandler(app, os.environ["SLACK_APP_TOKEN"])
+    await handler.start_async()
+
 
 if __name__ == "__main__":
-    # export SLACK_APP_TOKEN=xapp-***
-    # export SLACK_BOT_TOKEN=xoxb-***
-    handler = SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"])
-    handler.start()
+    import asyncio
+    loop = asyncio.get_event_loop()
+    result = loop.run_until_complete(main())
+
+    # asyncio.run(main())
