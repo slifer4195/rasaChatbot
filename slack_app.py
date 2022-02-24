@@ -22,7 +22,10 @@ async def say_hello(event, say):
     # r = await requests.post("http://localhost:5005/webhooks/rest/webhook",json={"sender":event['user'],"message":event["text"]})
             json_data = json.loads(await response.text())[0]
             db = await sdb.get_db_object()
-            await db.execute(f"insert into events values ('{event['user']}','{event['text']}','{json_data['text']}')")
+            query="""
+            insert into events values (?,?,?)
+            """
+            await db.execute(query, (event['user'],event['text'],json_data['text']))
             await db.commit()
 
             await say(f"{json_data['text']}")
