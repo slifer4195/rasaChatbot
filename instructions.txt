@@ -1,0 +1,11 @@
+'''
+create a virtual env using python, 
+activate the environment,
+switch to refactor branch,
+install rasa, create rasa model,
+and then run:
+'''
+pip install -r requirements.txt
+export the slack app and bot tokens
+rasa run --enable-api
+python3 slack_app.py
