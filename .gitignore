@@ -3,3 +3,11 @@ include/
 lib/
 lib64/
 share/
+.cache/
+models/
+.config/
+.keras
+__pycache__
+env/
+models/
+results/
