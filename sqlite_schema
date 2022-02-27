@@ -1,0 +1,6 @@
+create table events(
+    sender_id VARCHAR(255) NOT NULL,
+    request TEXT,
+    response TEXT,
+    Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
