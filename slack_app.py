@@ -7,6 +7,7 @@ import requests
 import json
 import aiohttp
 import sqlite_db as sdb
+from datetime import datetime
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -23,9 +24,9 @@ async def say_hello(event, say):
             json_data = json.loads(await response.text())[0]
             db = await sdb.get_db_object()
             query="""
-            insert into events values (?,?,?)
+            insert into events values (?,?,?,?)
             """
-            await db.execute(query, (event['user'],event['text'],json_data['text']))
+            await db.execute(query, (event['user'],event['text'],json_data['text'],datetime.now()))
             await db.commit()
 
             await say(f"{json_data['text']}")
