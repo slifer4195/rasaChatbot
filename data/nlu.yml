@@ -117,11 +117,6 @@ nlu:
     - attempt to quit alcohol before in the past
     - cut back on drinking in the past
     - reduce alcohol intake previously
-    - decrease amount of alcohol
-    - stop drinking shots
-    - decrease amount of beer you drink
-    - reduce number of shots
-    - slowly reduce the amount of alcohol you drink over time
 
 - intent: ask_tried_to_cut_back_what_worked
   examples: |
@@ -137,8 +132,11 @@ nlu:
     - how much do you drink
 
 # TODO: getting confused with another intent from before
-# - intent: ask_willingness_decrease_alcohol
-#   examples: | # TODO: Add more examples
+- intent: ask_willingness_decrease_alcohol
+  examples: | # TODO: Add more examples
+    - decrease amount of alcohol
+    - stop drinking shots
+    - reduce number of shots
 
 - intent: ask_meet_next_time
   examples: | # TODO: Add more examples
