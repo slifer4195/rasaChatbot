@@ -146,12 +146,12 @@ nlu:
     - please come for the next session
     - lets follow up again on your next visit
   
-# - intent: acknowledgement
-#   examples: |
-#     - okay great
-#     - awesome
-#     - good
-#     - 
+- intent: ask_user_number_question
+  examples: | # TODO: Add more examples
+    - how many times a day
+    - often do you drink
+    - many times frequently do you 
+    - number of drinks
 
 
 # - intent: confidence
