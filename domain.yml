@@ -17,6 +17,7 @@ intents:
   - ask_quantity_of_drinking
   - ask_willingness_decrease_alcohol
   - ask_meet_next_time
+  - ask_user_number_question
   # - understand
   # - benefit
   # - attempt
@@ -35,6 +36,9 @@ intents:
 
 
 responses:
+
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
   utter_meet_next_time:
   - text: ""
@@ -117,6 +121,11 @@ responses:
 
   utter_goodbye:
   - text: "Bye"
+
+  utter_user_number_question:
+  - text: "everyday"
+  - text: "very frequently"
+  - text: "3 times a day"
 
 
 session_config:
