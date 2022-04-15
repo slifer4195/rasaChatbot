@@ -6,7 +6,7 @@ intents:
   - asking_patient_issue
   - asking_wife_issue
   - sympathy
-  - ask_start_drinking_audit
+  - start_drinking_audit 
   - ask_drinkreason_benefits
   - ask_tried_to_cut_back
   - ask_tried_to_cut_back_what_worked
@@ -18,7 +18,9 @@ intents:
   - ask_willingness_decrease_alcohol
   - ask_meet_next_time
   - ask_user_number_question
-  # - understand
+  - inform
+  - offer_help
+  - ask_yesNo
   # - benefit
   # - attempt
   # - confidence
@@ -27,6 +29,10 @@ intents:
   # - question
   # - drinkreason
   # - drinktalk
+
+
+actions:
+  - action_hello_world
 
 # policies:
 #   - name: KerasPolicy
@@ -40,8 +46,9 @@ responses:
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
 
-  utter_meet_next_time:
-  - text: ""
+  utter_offer_help:
+  - text: "It is okay. I could be better."
+
   utter_willingness_decrease_alcohol:
   - text: "yes, that sounds doable"
   - text: "yes, i can do that"
@@ -51,16 +58,16 @@ responses:
   - text: "Two or three beers a night with a couple of shots"
 
   utter_solution_increase_confidence:
-  - text: "yes, I'd really like that"
+  - text: "I'd really like that"
 
   utter_cutback_confidence:
   - text: "On a scale, that’s probably about six or seven. It’s because I haven’t been successful in maintaining it in the past."
 
   utter_willingness_to_cut_back:
-  - text: "Yes, I really want to cut back. On a scale, my willingness would be at least eight."
+  - text: "I really want to cut back. On a scale, my willingness would be at least eight."
 
   utter_acknowledgement_support_group:
-  - text: "No I haven't. That's a good idea. I will try to do that"
+  - text: "That's a good idea. I will try to do that"
 
   utter_drink_reason:
   - text: "it helps me cope with my problems"
@@ -73,11 +80,14 @@ responses:
   - text: "thank you for understanding"
 
   utter_greet:
-  - text: "Hi"
+  - text: "Hello!"
+
+  utter_yesNo:
+  - text: "Yeah, sure. Sounds good"
+  - text: "No, I don`t think so"
 
   utter_yes:
-  - text: "sure"
-  - text: "yes"
+  - text: "yes, I understand"
 
   utter_issue:
   - text: "Well. I've been pastoring the church for the last 25 years and 
@@ -127,7 +137,10 @@ responses:
   - text: "very frequently"
   - text: "3 times a day"
 
+  utter_thinking:
+  - text: "Let me thinkk... give a sec"
+
 
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 120
   carry_over_slots_to_new_session: true
