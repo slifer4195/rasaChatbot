@@ -7,12 +7,39 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: when asked how is it going bot says okay and could be better
+  steps:
+  - intent: offer_help
+  - action: utter_offer_help
+
+- rule: say number output when asked number questions
   steps:
   - intent: ask_user_number_question
   - action: utter_user_number_question
 
+- rule: Say hello anytime user say hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say yes when user give solution to support group
+  steps:
+  - intent: ask_support_group_help
+  - action: utter_acknowledgement_support_group
+
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
   - intent: nlu_fallback
-  - action: utter_please_rephrase
+  # - action: utter_thinking
+  - action: action_hello_world
+
+- rule: talk about past solution when asked about past
+  steps:
+  - intent: ask_tried_to_cut_back_what_worked
+  - action: utter_tried_to_cut_back_what_worked
+
+
+- rule: respond yes or no in yes or no question
+  steps:
+  - intent: ask_yes_no
+  - action: utter_yesNo
