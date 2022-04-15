@@ -1,6 +1,8 @@
 version: "2.0"
 
 nlu:
+
+
 - intent: greet
   examples: |
     - hey
@@ -10,66 +12,72 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
     - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
+    - good morning
+    - good evening
     - good afternoon
-    - hello, i will be your nurse today
+    - hello, i will be your nurse 
 
+- intent: offer_help
+  examples: |
+    - how are you feeling
+    - what can I do for you
+    - what is going on these days
+    - anything wrong
+    - are you okay right now
+    - will you be alright
+    
 - intent: asking_patient_issue
   examples: |
-      - tell me about yourself
-      - tell me about your issue
-      - what problems are you facing
+      - about yourself
+      - about your issue
+      - problems are you facing
       - reason for visiting
       - reason for coming here
-      - tell me why you are here today
+      - why you are here today
+      - what can I do for you today
 
 - intent: asking_wife_issue
   examples: |
-      - tell me more about your wife?
+      - what is wrong with wife?
       - wife's problem's?
       - wife's disease?
       - difficulties faced by your wife?
 
 - intent: sympathy # maybe should make this a rule instead of using in stories
   examples: |
-      - hard to handle
-      - a lot of difficulties
-      - i understand
-      - compassion
-      - sympathy
+      - so you are using alcohol as a coping mechanism?
+      - Sounds difficult. It seems that you are using alcohol as a coping mechanism.
+      - You may be using alcohol as a coping mechanism. 
+      - it seems like you are using alcohol as a coping mechanism.
+      - incredibly hard. And it sounds like you are using alcohol to cope with it.
+      - I see. That must be hard.
+
 
 - intent: ask_drinkreason_benefits # extra why's maybe should remove
-  examples: |
-      - reason for your consumption of alcohol
-      - reason for your drinking
-      - benefits of drinking
-      - uses of drinking
+  examples: |   
+      - alcohol abuse benefits?
+      - alcohol benefits?
+      - drinking benifits?
+      - benefits of drinking?
+      - Name some benefits of drinking?
+      - So a score of 16 means you are drinking at a risky level. However it makes sense considering you are using it to cope with your home life. I want to give you feedback on your drinking. There are good and bad things to your drinking. Are you able to name some of the benefits you get?
+      - You scored a 16 which means you are drinking at risk levels. I understand it is something that you are using to cope with your home life. But I wanted to give you feedback on that.There are pros and cons to your drinking. Can you give me some benefits you get?
 
-- intent: ask_start_drinking_audit
-  examples: |
-      - talk about your drinking problems?
-      - talk about your drinking issues?
-      - do you mind if we talk a bit more about your alcohol addiction?
-      - alcohol audit?
-      - alcohol assessment?
 
 - intent: ask_support_group_help
   examples: |
     - thought about an Alzheimer’s support group to help you
-    - circle of friends to support you with your problems
+    - circle of friends to support 
     - group of people to help you 
 
 - intent: ask_willingness_to_cut_back
   examples: |
     - feel willing to cut back on alcholhol right now on a scale of one to ten
     - want to quit drinking from today
-    - try to stop drinking today
+    - stop drinking today
     - feel like stopping drinking right now
+    - try to stop drink
 
 - intent: ask_cutback_confidence
   examples: |
@@ -83,37 +91,13 @@ nlu:
     - find ways of making you more confident
     - maybe we should work on increasing your confidence
     - solutions for increasing your confidence
-    - talk about ways to help you cut back on alcohol
+    - ways to help you cut back on alcohol
     - solutions to help you stop drinking
-    
-# - intent: understand
-#   examples: |
-#       - That sounds like it would be incredibly hard. So it sounds like you are using alcohol as a coping mechanism. 
-#       - I see
-#       - I understand what you are going through
-#       - extremly diffuclt and hard
-#       - it is tough 
-#       - deal with 
-#       - struggle
-#       - get it
-#       - That's very unfortunate
-
-# - intent: benefit_of_drinking
-#   examples: |
-#       - why you drink
-#       - any benefit on drinking
-#       - what is the reason for drinking
-#       - are you problems solve by that
-#       - pros
-#       - feel better
-#       - improve
-#       - does it make it go away
-#       - is it helping your condition
 
 - intent: ask_tried_to_cut_back
   examples: |
     - tried quitting drinking in the past
-    - tried stopping drinking before
+    - try stopping drinking before
     - attempt to quit alcohol before in the past
     - cut back on drinking in the past
     - reduce alcohol intake previously
@@ -121,22 +105,26 @@ nlu:
 - intent: ask_tried_to_cut_back_what_worked
   examples: |
     - factors that helped when you tried to quit before
-    - aided you in cutting back of alcohol
-    - helped you when trying to quite drinking
+    - helped you when trying to quit drinking
     - worked in the past when you have cut back on your use 
+    - tell me something that worked before
+    - tried anything in the past to stop drinking
 
 - intent: ask_quantity_of_drinking
   examples: | # TODO: Add more examples
     - quantity of alcohol you drink
     - amount of drinks you consume
     - how much do you drink
-
+    - how many times 
+    - often do you drink
 # TODO: getting confused with another intent from before
 - intent: ask_willingness_decrease_alcohol
   examples: | # TODO: Add more examples
     - decrease amount of alcohol
     - stop drinking shots
     - reduce number of shots
+    - can try one beer a night
+    - cut down and cutback
 
 - intent: ask_meet_next_time
   examples: | # TODO: Add more examples
@@ -145,38 +133,22 @@ nlu:
     - looking forward to your next visit
     - please come for the next session
     - lets follow up again on your next visit
-  
-- intent: ask_user_number_question
-  examples: | # TODO: Add more examples
-    - how many times a day
-    - often do you drink
-    - many times frequently do you 
-    - number of drinks
-
-
-# - intent: confidence
-#   examples: |
-#     - Do you feel willing to cut back right now on a scale of one to ten how willing you would say that you are?
-
-
-# - intent: question
-#   examples: |
-#     - how much you are drinking
-#     - how often are you drinking
-
-
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
     - see you later
-    - Maybe I can talk to you about this again at the next visit?
-    - Okay great. It was nice meeting you and nice talking to you.
+    - bye
 
+- intent: start_drinking_audit 
+  examples: | #
+    - drinking too much is not good
+    - your health is not good
+    - it is very harmfull to your body
+    - in long term, it will be bad for you
+
+- intent: ask_yesNo
+  examples: | # TODO: Add more examples
+    - can you try
+    - do you think
+    - try your best to do
+    - would you be able to
+    - will you do
+
+  
