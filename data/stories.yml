@@ -2,13 +2,6 @@ version: "2.0"
 
 stories:
 
-- story: introducion_path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  # - intent: introduce
-  # - action: utter_introduce
-
 - story: question_path
   steps:
   - intent: asking_patient_issue
@@ -23,10 +16,20 @@ stories:
 
 - story: talk_about_drinking
   steps: 
-  - intent: ask_start_drinking_audit 
+  - intent: start_drinking_audit 
   - action: utter_yes
   - intent: ask_drinkreason_benefits
   - action: utter_drink_reason
+
+- story: past_solution
+  steps: 
+  - intent: ask_tried_to_cut_back_what_worked
+  - action: utter_tried_to_cut_back_what_worked
+  - intent: ask_tried_to_cut_back
+  - action: utter_tried_to_cut_back
+
+- story: past_solution2
+  steps: 
   - intent: ask_tried_to_cut_back
   - action: utter_tried_to_cut_back
   - intent: ask_tried_to_cut_back_what_worked
@@ -34,8 +37,6 @@ stories:
 
 - story: suggest_solutions_for_drinking
   steps: 
-  - intent: ask_support_group_help
-  - action: utter_acknowledgement_support_group
   - intent: ask_willingness_to_cut_back
   - action: utter_willingness_to_cut_back
   - intent: ask_cutback_confidence
@@ -51,41 +52,5 @@ stories:
   - action: utter_tried_to_cut_back
   - intent: ask_willingness_decrease_alcohol
   - action: utter_willingness_decrease_alcohol
-  - intent: ask_meet_next_time
-  - action: utter_acknowledgement
-
-
-# - story: reasoning_path
-#   steps:
-#   - intent: issue
-#   - action: utter_issue
-#   - intent: understand
-#   - action: utter_respond
-#   - intent: benefit
-#   - action: utter_benefit
-
-# - story: past_path
-#   steps:
-#   - intent: attempt
-#   - action: utter_attempt
-#   - intent: solution
-#   - action: utter_solution
-#   - intent: suggestion
-#   - action: utter_suggestion
-
-# - story: confidence_path
-#   steps:
-#   - intent: confidence
-#   - action: utter_confidence
-#   - intent: suggestion
-#   - action: utter_suggestion
-
-# - story: drinking
-#   steps:
-#   - intent: drinktalk
-#   - action: utter_drinktalk_response
-#   - intent: drinkreason
-#   - action: utter_drinkreason_response
-
 
 
